@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Explosão de Amor</title>
+  </head>
+  <body onload="startCounter(); requestFullscreen();">
+    <!-- Música de fundo -->
+    <audio id="bg-music" loop>
+      <source src="love-story-156946.mp3" type="audio/mpeg" />
+    </audio>
+
+    <canvas id="canvas"></canvas>
+
+    <div class="overlay">
+      <h1>EU TE AMO, MINHA PRETA 💜</h1>
+      <p>Para sempre no meu coração</p>
+      <div class="counter" id="day-counter"></div>
+    </div>
+
+    <div class="controls">
+      <button onclick="toggleMusic()">🎵 Música</button>
+      <button onclick="shareLove()">💌 Compartilhar</button>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>

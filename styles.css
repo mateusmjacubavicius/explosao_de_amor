@@ -1,0 +1,94 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Estilo principal do corpo */
+body {
+  background-color: #000;
+  overflow: hidden;
+  font-family: "Courier New", monospace;
+}
+/* Canvas ocupa toda tela */
+canvas {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+/* Overlay com mensagens centrais */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  color: #cc66ff;
+  text-align: center;
+}
+/* Título pulsante */
+.overlay h1 {
+  font-size: 4rem;
+  animation: pulse 2s infinite;
+}
+/* Texto secundário */
+.overlay p {
+  font-size: 1.5rem;
+  color: #da70d6;
+}
+/* Animação pulsante */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+}
+/* Botões de controle */
+.controls {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 4;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+.controls button {
+  background: #cc66ff;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.controls button:hover {
+  background: #da70d6;
+}
+/* Contador de dias e horas */
+.counter {
+  margin-top: 15px;
+  font-size: 1.3rem;
+  color: #dda0dd;
+  pointer-events: auto;
+  user-select: none;
+}
